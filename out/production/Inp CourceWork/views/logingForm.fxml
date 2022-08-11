@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="logingForm" prefHeight="579.0" prefWidth="492.0" style="-fx-background-color: #1abc9c;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LogingFormController">
+   <children>
+      <AnchorPane prefHeight="49.0" prefWidth="492.0" style="-fx-background-color: #27ae60;">
+         <children>
+            <Label layoutX="141.0" layoutY="8.0" text="Customer Loging" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="30.0" layoutY="69.0" prefHeight="484.0" prefWidth="431.0" style="-fx-background-color: #ecf0f1;">
+         <children>
+            <TextField fx:id="txtUsername" layoutX="73.0" layoutY="86.0" prefHeight="31.0" prefWidth="293.0" />
+            <TextField fx:id="txtPassword" layoutX="73.0" layoutY="170.0" prefHeight="31.0" prefWidth="293.0" />
+            <Button layoutX="130.0" layoutY="250.0" mnemonicParsing="false" onAction="#LogingButton" prefHeight="31.0" prefWidth="179.0" style="-fx-background-color: #3867d6;" text="Loging" textFill="WHITE">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="13.0" />
+               </font>
+            </Button>
+            <Label layoutX="73.0" layoutY="63.0" text="User Name">
+               <font>
+                  <Font name="Bell MT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="73.0" layoutY="149.0" text="Password">
+               <font>
+                  <Font name="Bell MT" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextField layoutX="-481.0" layoutY="-1.0" />
+   </children>
+</AnchorPane>
