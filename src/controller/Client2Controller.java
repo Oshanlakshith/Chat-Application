@@ -20,7 +20,8 @@ public class Client2Controller extends ClientController {
     public void initialize() {
         new Thread(() -> {
             try {
-                InputStreamReader inputStreamReader = new InputStreamReader(controller.socket.getInputStream());
+                socket = new Socket("localhost", 5000);
+                InputStreamReader inputStreamReader = new InputStreamReader(socket.getInputStream());
                 bufferedReader = new BufferedReader(inputStreamReader);
                 String record = bufferedReader.readLine();
 

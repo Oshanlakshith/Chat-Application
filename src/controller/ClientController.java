@@ -3,6 +3,7 @@ package controller;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -40,5 +41,9 @@ public class ClientController{
         System.out.println("Client Writer :"+printWriter);
         clientTextBox.appendText("\n\n\t\t\t\t\t\t\t\t\t\t\t\tClient :" + txtText.getText());
         printWriter.flush();
+    }
+
+    public void cameraClient(MouseEvent mouseEvent) {
+        System.out.println("Hellow");
     }
 }

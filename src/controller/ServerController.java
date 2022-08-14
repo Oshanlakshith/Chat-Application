@@ -3,13 +3,13 @@ package controller;
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
+import java.util.Properties;
 
 public class ServerController {
     public TextArea serverB;
@@ -29,7 +29,6 @@ public class ServerController {
                 bufferedReader = new BufferedReader(inputStreamReader);
                 String record = bufferedReader.readLine();
 
-
                 while (!record.equals("Exit")) {
                     record = bufferedReader.readLine();
                     serverB.appendText("\nClient :" + record.trim() + "\n");
@@ -45,5 +44,8 @@ public class ServerController {
         printWriter.println(txtServer.getText());
         serverB.appendText("\n\n\t\t\t\t\t\t\t\t\t\t\t\tServer :" + txtServer.getText());
         printWriter.flush();
+    }
+
+    public void cameraServer(MouseEvent mouseEvent) {
     }
 }
