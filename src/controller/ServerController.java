@@ -5,11 +5,10 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
+import javax.swing.*;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.nio.charset.StandardCharsets;
-import java.util.Properties;
 
 public class ServerController {
     public TextArea serverB;
@@ -47,5 +46,10 @@ public class ServerController {
     }
 
     public void cameraServer(MouseEvent mouseEvent) {
+        JFileChooser jFileChooser = new JFileChooser();
+        int response = jFileChooser.showOpenDialog(null);
+        if (response == JFileChooser.APPROVE_OPTION) {
+            File file = new File(jFileChooser.getSelectedFile().getAbsolutePath());
+        }
     }
 }

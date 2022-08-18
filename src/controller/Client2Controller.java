@@ -15,7 +15,6 @@ public class Client2Controller extends ClientController {
     public TextField txt2Text;
     Socket socket = null;
     BufferedReader bufferedReader;
-    ClientController controller = new ClientController();
 
     public void initialize() {
         new Thread(() -> {
@@ -33,7 +32,6 @@ public class Client2Controller extends ClientController {
                 throw new RuntimeException(e);
             }
         }).start();
-
     }
 
     public void sendOnAction2(ActionEvent actionEvent) throws IOException {
